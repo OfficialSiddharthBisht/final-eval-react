@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import {Link} from 'react-router-dom';
 function Home(){
 const [movie , setMovie] = React.useState([]);
     React.useEffect(()=>{
@@ -14,16 +15,15 @@ const [movie , setMovie] = React.useState([]);
             console.log(error);
         })
     },[])
-    console.log(movie);
     return(
         <Container>
              {
-                movie?.map((product)=>
+                movie?.map((mov)=>
                 (
-                    <div key ={product.id}>
-                    <>{product.title}</>
-                    <>{product.image}</>
-                    {/* <><Link to={`/products/${product.id}`}>More Details</Link></> */}
+                    <div key ={mov.id}>
+                    <>{mov.title}</>
+                    <><img src = {`${mov.image}`}/></>
+                    <><Link to={`/movies/${mov.id}`}>More Details</Link></>
                     </div>
  
                 ))
