@@ -23,7 +23,8 @@ const [movie , setMovie] = React.useState([]);
                     <div key ={mov.id}>
                     <>{mov.title}</>
                     <><img src = {`${mov.image}`}/></>
-                    <><Link to={`/movies/${mov.id}`}>More Details</Link></>
+                    {/* <><Link to={`/movies/${mov.id}`}>More Details</Link></> */}
+                    <><Link to={`/movies/`}>More Details</Link></>
                     </div>
  
                 ))

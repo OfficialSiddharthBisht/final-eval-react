@@ -55,10 +55,13 @@ function MovieDetails(){
         )
     }
     const {title, image ,description} = movieDetail;
-    console.log(movieDetail);
+    console.log(title);
     return(
+        <>
+        <h1>Movie Description</h1>
         <Box textAlign="center" width="200px" margin="auto" boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px">
         <Image textAlign="center" boxSize="200px" src={image} borderRadius='full'  />
+        
         <h3>{title}</h3>
         <Button onClick={onOpen}>Description</Button>
         <Box width="400px" mt="150px">
@@ -73,7 +76,8 @@ function MovieDetails(){
                 </ModalContent>
             </Modal>
         </Box>
-    </Box>
+        </Box>
+    </>
     )
 }
 
